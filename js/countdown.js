@@ -55,12 +55,16 @@ class CountdownTimer {
 	}
 
 	startTimer() {
-		const timer = this.getTimeRemaining(this.targetDate);
-		this.updateTimer(timer);
-		this.updateColors();
-		setInterval(() => {
-			const timer = this.getTimeRemaining(this.targetDate);
-			this.updateTimer(timer);
+		//const timer = this.getTimeRemaining(this.targetDate);
+		//this.updateTimer(timer);
+		//this.updateColors();
+		
+		var interval = setInterval(() => {
+				const timer = this.getTimeRemaining(this.targetDate);
+				if(timer.total <= 0 ){ this.updateTimer(0,0,0,0); startConfetti(); clearInterval(interval);} else {					
+					this.updateTimer(timer);	
+				}
 		}, 1000);
+	
 	}
 }
