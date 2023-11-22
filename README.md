@@ -1,4 +1,4 @@
 # holiday-countdown
 
-![holiday-countdown](./assets/logo.png)
+![holiday-countdown](./assets/logo.jpg)
 Vanilla Javascript Implementation
